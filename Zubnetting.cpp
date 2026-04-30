@@ -4,7 +4,7 @@ bool isValid(const NetworkInput& input) {
     // stringstream ss(input);
     // string octet; int count = 0;
 
-    return 0;
+    return 1;
 }
 
 NetworkInput getNetworkInput(){
