@@ -7,5 +7,7 @@ int main() {
     NetworkInput network_0 = getNetworkInput();
     printNetworkInput(network_0);
 
+    cout << isValid(network_0) << endl;
+
     return 0;
 }
