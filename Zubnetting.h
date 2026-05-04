@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <sstream>
+#include <string>
+#include <cctype>
 using namespace std;
 
 struct NetworkInput {
@@ -11,6 +13,7 @@ struct NetworkInput {
 };
 
 bool isValid(const NetworkInput& input);
+void printIsValid(const NetworkInput& input);
 NetworkInput getNetworkInput();
 void printNetworkInput(const NetworkInput& input);
 

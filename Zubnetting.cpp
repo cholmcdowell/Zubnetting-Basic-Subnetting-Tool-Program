@@ -24,6 +24,19 @@ bool isValid(const NetworkInput& input) {
     return count == 4;
 }
 
+void printIsValid(const NetworkInput& input) {
+    if (isValid(input)) {
+        cout << "Network "; 
+        printNetworkInput(input);
+        cout << " is valid." << endl; 
+    }
+    else {
+        cout << "Network "; 
+        printNetworkInput(input);
+        cout << " is not valid." << endl;  
+    }
+}
+
 NetworkInput getNetworkInput(){
     NetworkInput input;
     cout << "IP Address: "; cin >> input.ip_address;
@@ -34,5 +47,5 @@ NetworkInput getNetworkInput(){
 
 void printNetworkInput(const NetworkInput& input) {
     cout << "IP Address: " << input.ip_address << "/"
-    << input.cidr << endl;
+    << input.cidr;
 }
