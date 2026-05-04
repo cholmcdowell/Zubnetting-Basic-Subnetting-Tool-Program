@@ -1,25 +1,54 @@
 #include "Zubnetting.h"
 
+bool isValidCIDR(const string& cidr) {
+    // Check if CIDR is empty or too long
+    if (cidr.empty() || cidr.length() > 2) { return false; }
+
+    // Check if all characters are digits
+    for (char c : cidr) {
+        if (!isdigit(static_cast<unsigned char>(c))) { return false; }
+    }
+
+    // Check if digits are within 0-32
+    try {
+        int cidr_int = stoi(cidr);
+        if (cidr_int < 0 || cidr_int > 32) { return false; }
+    }
+    catch (...) {
+        return false;
+    }
+
+    return true;
+}
+
 bool isValidOctet(const string& octet) {
     // Check if octet is empty or too long
     if (octet.empty() || octet.length() > 3) { return false; }
 
     // Check if all characters are digits
     for (char c : octet) {
-        if (!isdigit(c)) { return false; }
+        if (!isdigit(static_cast<unsigned char>(c))) { return false; }
     }
 
     // No leading zeros
     if (octet.length() > 1 && octet[0] == '0') { return false; }
 
     // Check if digits are within 0-255
-    int octet_int = stoi(octet);
-    if (octet_int < 0 || octet_int > 255) { return false; }
+    try {
+        int octet_int = stoi(octet);
+        if (octet_int < 0 || octet_int > 255) { return false; }
+    }
+    catch (...) {
+        return false;
+    }
 
     return true;
 }
 
 bool isValid(const NetworkInput& input) {
+    // Check if CIDR is valid
+    if (!isValidCIDR(input.cidr)) { return false; }
+
     stringstream ss(input.ip_address);
 
     // Check leading or trailing .
@@ -52,8 +81,8 @@ void printIsValid(const NetworkInput& input) {
 
 NetworkInput getNetworkInput(){
     NetworkInput input;
-    cout << "IP Address: "; cin >> input.ip_address;
-    cout << "CIDR: "; cin >> input.cidr;
+    cout << "IP Address: "; getline(cin, input.ip_address);
+    cout << "CIDR: "; getline(cin, input.cidr);
 
     return input;
 }

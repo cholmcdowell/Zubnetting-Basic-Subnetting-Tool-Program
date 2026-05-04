@@ -12,6 +12,7 @@ struct NetworkInput {
     string cidr;
 };
 
+bool isValidCIDR(const string& cidr);
 bool isValidOctet(const string& octet);
 bool isValid(const NetworkInput& input);
 void printIsValid(const NetworkInput& input);
