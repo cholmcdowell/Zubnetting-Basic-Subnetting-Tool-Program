@@ -91,3 +91,29 @@ void printNetworkInput(const NetworkInput& input) {
     cout << "IP Address: " << input.ip_address << "/"
     << input.cidr;
 }
+
+void printSubnetBinary(int cidr) {
+    if (cidr < 0 || cidr > 32) {
+        cout << "Invalid CIDR value." << endl;
+        return;
+    }
+    cout << "Subnet Mask (binary): ";
+    for (int i = 0; i < 32; i++) {
+        if (i < cidr) { cout << "1"; }
+        else { cout << "0"; }
+        if ((i + 1) % 8 == 0 && i != 31) { cout << "."; }
+    }
+    cout << endl;
+}
+
+void printSubnet(int cidr) {
+    if (cidr < 0 || cidr > 32) {
+        cout << "Invalid CIDR value." << endl;
+        return;
+    }
+    int mask[4] = {0, 0, 0, 0};
+    for (int i = 0; i < cidr; i++) {
+        mask[i / 8] += (1 << (7 - (i % 8)));
+    }
+    cout << "Subnet Mask: " << mask[0] << "." << mask[1] << "." << mask[2] << "." << mask[3] << endl;
+}
