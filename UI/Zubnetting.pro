@@ -8,13 +8,17 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    ../Logic/zubnetting.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    ../Logic/zubnetting.h
 
 FORMS += \
     mainwindow.ui
+
+INCLUDEPATH += ../Logic
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

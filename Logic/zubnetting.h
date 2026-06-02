@@ -23,4 +23,6 @@ void printNetworkInput(const NetworkInput& input);
 void printSubnetBinary(int cidr);
 void printSubnet(int cidr);
 
+string QSubnetMask(int cidr);
+
 #endif

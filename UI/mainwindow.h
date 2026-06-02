@@ -1,5 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+#include "zubnetting.h"
 
 #include <QMainWindow>
 
@@ -16,6 +17,9 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow() override;
+
+private slots:
+    void on_bdnEnter_clicked();
 
 private:
     Ui::MainWindow *ui;

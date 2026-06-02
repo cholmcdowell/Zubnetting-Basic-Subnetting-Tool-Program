@@ -117,3 +117,20 @@ void printSubnet(int cidr) {
     }
     cout << "Subnet Mask: " << mask[0] << "." << mask[1] << "." << mask[2] << "." << mask[3] << endl;
 }
+
+// For Qt implementation, not used in console version
+
+string QSubnetMask(int cidr)
+{
+    int mask[4] = {0,0,0,0};
+
+    for (int i = 0; i < cidr; i++)
+    {
+        mask[i / 8] += (1 << (7 - (i % 8)));
+    }
+
+    return to_string(mask[0]) + "." +
+           to_string(mask[1]) + "." +
+           to_string(mask[2]) + "." +
+           to_string(mask[3]);
+}

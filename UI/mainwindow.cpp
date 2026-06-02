@@ -12,3 +12,23 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_bdnEnter_clicked()
+{
+    NetworkInput input;
+
+    input.ip_address = ui->txtIP->text().toStdString();
+    input.cidr = ui->txtCIDR->text().toStdString();
+
+    if (!isValid(input)) {
+        ui->txtSubnet->setPlainText("Invalid IP/CIDR.");
+        return;
+    }
+
+    int cidr = stoi(input.cidr);
+
+    ui->txtSubnet->setPlainText(
+        QString::fromStdString(QSubnetMask(cidr))
+    );
+}
+
