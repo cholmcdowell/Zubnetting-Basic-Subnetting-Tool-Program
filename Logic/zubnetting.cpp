@@ -134,3 +134,15 @@ string QSubnetMask(int cidr)
            to_string(mask[2]) + "." +
            to_string(mask[3]);
 }
+
+string QSubnetBinary(int cidr)
+{
+    string binary = "";
+    for (int i = 0; i < 32; i++)
+    {
+        if (i < cidr) { binary += "1"; }
+        else { binary += "0"; }
+        if ((i + 1) % 8 == 0 && i != 31) { binary += "."; }
+    }
+    return binary;
+}

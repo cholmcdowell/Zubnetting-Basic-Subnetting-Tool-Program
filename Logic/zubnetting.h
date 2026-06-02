@@ -24,5 +24,6 @@ void printSubnetBinary(int cidr);
 void printSubnet(int cidr);
 
 string QSubnetMask(int cidr);
+string QSubnetBinary(int cidr);
 
 #endif

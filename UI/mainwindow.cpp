@@ -21,7 +21,8 @@ void MainWindow::on_bdnEnter_clicked()
     input.cidr = ui->txtCIDR->text().toStdString();
 
     if (!isValid(input)) {
-        ui->txtSubnet->setPlainText("Invalid IP/CIDR.");
+        ui->txtSubnet->setPlainText("Invalid IP/CIDR");
+        ui->txtSubnet_2->setPlainText("Invalid IP/CIDR");
         return;
     }
 
@@ -29,6 +30,9 @@ void MainWindow::on_bdnEnter_clicked()
 
     ui->txtSubnet->setPlainText(
         QString::fromStdString(QSubnetMask(cidr))
+    );
+    ui->txtSubnet_2->setPlainText(
+        QString::fromStdString(QSubnetBinary(cidr))
     );
 }
 
