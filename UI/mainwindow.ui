@@ -20,10 +20,10 @@
    <widget class="QLabel" name="lblIP">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>90</y>
+      <x>100</x>
+      <y>92</y>
       <width>81</width>
-      <height>21</height>
+      <height>30</height>
      </rect>
     </property>
     <property name="font">
@@ -45,10 +45,10 @@ color: rgb(0, 0, 0);</string>
    <widget class="QLabel" name="lblCIDR">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>120</y>
+      <x>140</x>
+      <y>130</y>
       <width>41</width>
-      <height>20</height>
+      <height>30</height>
      </rect>
     </property>
     <property name="font">
@@ -70,10 +70,10 @@ color: rgb(0, 0, 0);</string>
    <widget class="QLineEdit" name="txtIP">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>190</x>
       <y>90</y>
-      <width>113</width>
-      <height>28</height>
+      <width>115</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -83,10 +83,10 @@ color: rgb(0, 0, 0);</string>
    <widget class="QLineEdit" name="txtCIDR">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>120</y>
-      <width>113</width>
-      <height>28</height>
+      <x>190</x>
+      <y>130</y>
+      <width>115</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -97,7 +97,7 @@ color: rgb(0, 0, 0);</string>
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>150</y>
+      <y>170</y>
       <width>81</width>
       <height>21</height>
      </rect>
@@ -112,7 +112,7 @@ color: rgb(0, 0, 0);</string>
       <x>90</x>
       <y>300</y>
       <width>91</width>
-      <height>21</height>
+      <height>30</height>
      </rect>
     </property>
     <property name="font">
@@ -136,7 +136,7 @@ color: rgb(0, 0, 0);</string>
      <rect>
       <x>190</x>
       <y>290</y>
-      <width>151</width>
+      <width>271</width>
       <height>41</height>
      </rect>
     </property>
@@ -149,8 +149,8 @@ color: rgb(0, 0, 0);</string>
      <rect>
       <x>40</x>
       <y>340</y>
-      <width>151</width>
-      <height>41</height>
+      <width>145</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="font">
