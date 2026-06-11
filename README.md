@@ -14,7 +14,7 @@ The application has successfully passed alpha testing and is now available as a 
 
 ## 📖 About
 
-Subnet Calculator is a desktop application designed to simplify common IPv4 subnetting tasks through an easy-to-use graphical interface.
+Zubnet - Subnet Calculator is a desktop application designed to simplify common IPv4 subnetting tasks through an easy-to-use graphical interface.
 
 The goal is to provide a lightweight tool that helps users quickly calculate subnet information while also serving as a practical software development project.
 
