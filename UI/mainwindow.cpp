@@ -36,3 +36,12 @@ void MainWindow::on_bdnEnter_clicked()
     );
 }
 
+
+void MainWindow::on_bdnClear_clicked()
+{
+    ui->txtIP->clear();
+    ui->txtCIDR->clear();
+    ui->txtSubnet->clear();
+    ui->txtSubnet_2->clear();
+}
+

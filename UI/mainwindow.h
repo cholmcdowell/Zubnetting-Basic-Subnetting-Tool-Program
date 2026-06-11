@@ -21,6 +21,8 @@ public:
 private slots:
     void on_bdnEnter_clicked();
 
+    void on_bdnClear_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
