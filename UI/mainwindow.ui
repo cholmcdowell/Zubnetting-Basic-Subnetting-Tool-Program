@@ -105,8 +105,38 @@ color: rgb(0, 0, 0);</string>
       <height>21</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #4A6FA5;
+    color: white;
+    border: 1px solid #35527A;
+    border-radius: 5px;
+    padding: 4px;
+}
+QPushButton:hover {
+    background-color: rgb(135, 135, 135);
+}
+
+QPushButton:pressed {
+    background-color: #2E4A6B;
+}</string>
+    </property>
     <property name="text">
      <string>Enter</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLabel" name="lblSubnet">
@@ -150,9 +180,9 @@ color: rgb(0, 0, 0);</string>
    <widget class="QLabel" name="lblSubnet_binary">
     <property name="geometry">
      <rect>
-      <x>40</x>
+      <x>30</x>
       <y>340</y>
-      <width>145</width>
+      <width>161</width>
       <height>30</height>
      </rect>
     </property>
@@ -193,6 +223,23 @@ color: rgb(0, 0, 0);</string>
       <width>81</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #4A6FA5;
+    color: white;
+    border: 1px solid #35527A;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+QPushButton:hover {
+    background-color: rgb(135, 135, 135);
+}
+
+QPushButton:pressed {
+    background-color: #2E4A6B;
+}</string>
     </property>
     <property name="text">
      <string>Clear</string>
