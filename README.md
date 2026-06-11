@@ -6,11 +6,9 @@ A simple subnet calculator built with **C++** and the **Qt Framework**.
 
 ## 🚧 Project Status
 
-**This project is currently in active development.**
+**Alpha testing is complete.**
 
-The application is still a work in progress and is being developed as both a networking utility and a way to expand knowledge of C++ and Qt application development.
-
-Features, functionality, and the user interface may change frequently as development continues.
+The application has successfully passed alpha testing and is now available as a downloadable release. A packaged `.zip` file containing the `Zubnet.exe` application is ready for use on compatible systems.
 
 ---
 
@@ -36,29 +34,47 @@ The goal is to provide a lightweight tool that helps users quickly calculate sub
 
 - Enhanced user interface and styling
 - Export and copy functionality
-- Installer and packaged releases
+
+---
+
+## 📦 Download
+
+A pre-built release is available for download:
+
+- **File:** `Zubnet.zip`
+- **Executable:** `Zubnet.exe`
+- **Architecture:** 64-bit (x86_64)
+- **Toolchain:** MinGW64
+- **Qt Version:** 6.11.1
+
+> **Note:** This build targets **64-bit Windows** systems only. Extract the `.zip` and run `Zubnet.exe` directly — no installation required.
 
 ---
 
 ## 🔧 Built With
 
 - **C++**
-- **Qt Framework**
+- **Qt 6.11.1**
 - **Qt Creator**
+- **MinGW64**
 
 ---
 
 ## 🚀 Getting Started
 
-### Requirements
+### Running the Application
 
-- Qt 6.x (or compatible version)
-- C++17 compatible compiler
-- Qt Creator (recommended)
+1. Download `Zubnet.zip` from the releases section.
+2. Extract the contents to a folder of your choice.
+3. Run `Zubnet.exe`.
 
-### Build Instructions
+> Ensure your system is running a **64-bit version of Windows** for compatibility.
 
---- Will be provided soon. ---
+### Building from Source
+
+Build instructions will be provided in a future update.
+
+---
 
 ## 🎯 Purpose
 
@@ -73,7 +89,7 @@ This project was created to:
 
 ## ⚠️ Disclaimer
 
-This software is currently under development and may contain bugs or incomplete functionality.
+This software has completed alpha testing but may still contain bugs or limitations.
 
 Always verify networking calculations before using them in production environments.
 
