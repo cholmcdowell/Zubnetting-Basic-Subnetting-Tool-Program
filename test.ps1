@@ -1,2 +1,0 @@
-Get-Date
-Get-Service
