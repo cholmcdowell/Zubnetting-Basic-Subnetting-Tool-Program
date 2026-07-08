@@ -23,6 +23,8 @@ void MainWindow::on_bdnEnter_clicked()
     if (!isValid(input)) {
         ui->txtSubnet->setPlainText("Invalid IP/CIDR");
         ui->txtSubnet_2->setPlainText("Invalid IP/CIDR");
+        ui->txtNetworkAddress->setPlainText("Invalid IP/CIDR");
+        ui->txtBroadcastAddress->setPlainText("Invalid IP/CIDR");
         return;
     }
 
@@ -34,6 +36,13 @@ void MainWindow::on_bdnEnter_clicked()
     ui->txtSubnet_2->setPlainText(
         QString::fromStdString(QSubnetBinary(cidr))
     );
+
+    ui->txtNetworkAddress->setPlainText(
+        QString::fromStdString(QNetworkAddress(input.ip_address, cidr))
+    );
+    ui->txtBroadcastAddress->setPlainText(
+        QString::fromStdString(QBroadcastAddress(input.ip_address, cidr))
+    );
 }
 
 
@@ -43,5 +52,7 @@ void MainWindow::on_bdnClear_clicked()
     ui->txtCIDR->clear();
     ui->txtSubnet->clear();
     ui->txtSubnet_2->clear();
+    ui->txtNetworkAddress->clear();
+    ui->txtBroadcastAddress->clear();
 }
 
