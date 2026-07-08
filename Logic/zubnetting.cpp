@@ -120,6 +120,18 @@ void printSubnet(int cidr) {
 
 // For Qt implementation, not used in console version
 
+vector<int> parseOctets(const string& ip_address) {
+    vector<int> octets;
+    stringstream ss(ip_address);
+    string octet;
+
+    while (getline(ss, octet, '.')) {
+        octets.push_back(stoi(octet));
+    }
+
+    return octets;
+}
+
 string QSubnetMask(int cidr)
 {
     int mask[4] = {0,0,0,0};
@@ -145,4 +157,46 @@ string QSubnetBinary(int cidr)
         if ((i + 1) % 8 == 0 && i != 31) { binary += "."; }
     }
     return binary;
+}
+
+string QNetworkAddress(const string& ip_address, int cidr)
+{
+    vector<int> octets = parseOctets(ip_address);
+    int mask[4] = {0, 0, 0, 0};
+
+    for (int i = 0; i < cidr; i++)
+    {
+        mask[i / 8] += (1 << (7 - (i % 8)));
+    }
+
+    string network_address = "";
+    for (int i = 0; i < 4; i++)
+    {
+        int network_octet = octets[i] & mask[i];
+        network_address += to_string(network_octet);
+        if (i < 3) { network_address += "."; }
+    }
+
+    return network_address;
+}
+
+string QBroadcastAddress(const string& ip_address, int cidr)
+{
+    vector<int> octets = parseOctets(ip_address);
+    int mask[4] = {0, 0, 0, 0};
+
+    for (int i = 0; i < cidr; i++)
+    {
+        mask[i / 8] += (1 << (7 - (i % 8)));
+    }
+
+    string broadcast_address = "";
+    for (int i = 0; i < 4; i++)
+    {
+        int broadcast_octet = octets[i] | (~mask[i] & 0xFF);
+        broadcast_address += to_string(broadcast_octet);
+        if (i < 3) { broadcast_address += "."; }
+    }
+
+    return broadcast_address;
 }
