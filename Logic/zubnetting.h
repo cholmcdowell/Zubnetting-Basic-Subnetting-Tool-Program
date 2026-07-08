@@ -5,6 +5,7 @@
 #include <sstream>
 #include <string>
 #include <cctype>
+#include <vector>
 using namespace std;
 
 struct NetworkInput {
@@ -23,7 +24,10 @@ void printNetworkInput(const NetworkInput& input);
 void printSubnetBinary(int cidr);
 void printSubnet(int cidr);
 
+vector<int> parseOctets(const string& ip_address);
 string QSubnetMask(int cidr);
 string QSubnetBinary(int cidr);
+string QNetworkAddress(const string& ip_address, int cidr);
+string QBroadcastAddress(const string& ip_address, int cidr);
 
 #endif
