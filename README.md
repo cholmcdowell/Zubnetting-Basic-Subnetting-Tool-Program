@@ -41,7 +41,7 @@ The goal is to provide a lightweight tool that helps users quickly calculate sub
 
 A pre-built release is available for download:
 
-- **File:** `ZubnetV0.0.zip`
+- **File:** `ZubnetV1.0.zip`
 - **Executable:** `Zubnetting.exe`
 - **Architecture:** 64-bit (x86_64)
 - **Toolchain:** MinGW64
